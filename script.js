@@ -8,7 +8,7 @@ const APK_URL = "https://expo.dev/artifacts/eas/fOwdyrWOF5JVrSb5TqQ11lBmeY01Q9Mh
 
 const downloadButton = document.getElementById("downloadButton");
 
-if (APK_URL && APK_URL !== "https://expo.dev/artifacts/eas/fOwdyrWOF5JVrSb5TqQ11lBmeY01Q9Mhs9gB6KeJCWM.apk") {
+if (APK_URL && APK_URL !== "nothing") {
   downloadButton.href = APK_URL;
   downloadButton.setAttribute("download", "");
 } else {
