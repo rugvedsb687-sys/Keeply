@@ -146,23 +146,290 @@ a { color: inherit; text-decoration: none; }
 footer { padding:30px 9vw; display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,.05); color:#6d819e; font-size:.8rem; }
 .footer-brand { color:#dce8f7; font-size:1rem; }
 .footer-brand .brand-icon { width:28px;height:28px;border-radius:9px;font-size:.85rem; }
-@media (max-width: 900px) {
-  .navbar nav { display:none; }
-  .hero { grid-template-columns:1fr; padding-top:70px; }
-  .hero-preview { margin-top:10px; }
-  .feature-grid,.steps { grid-template-columns:1fr 1fr; }
-  .privacy-card { grid-template-columns:1fr; padding:45px; }
-  .privacy-visual { display:none; }
-}
+/* ================================
+   MOBILE DESIGN
+   ================================ */
+
 @media (max-width: 600px) {
-  .navbar { padding:0 5vw; }
-  .nav-download { padding:9px 12px; font-size:.78rem; }
-  .hero,.section,.privacy-section,.install-section,.about-section { padding-left:5vw; padding-right:5vw; }
-  .hero { min-height:auto; padding-top:65px; padding-bottom:80px; }
-  .hero h1 { font-size:3rem; }
-  .feature-grid,.steps,.privacy-points { grid-template-columns:1fr; }
-  .privacy-card { padding:30px; }
-  .cta-section { padding:0 5vw 70px; }
-  .cta-card { flex-direction:column; align-items:flex-start; padding:32px; }
-  footer { padding:25px 5vw; flex-wrap:wrap; gap:12px; }
+
+    /* Navigation */
+    .navbar {
+        height: 64px;
+        padding: 0 18px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .brand {
+        font-size: 1.05rem;
+    }
+
+    .brand-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+    }
+
+    .nav-download {
+        padding: 9px 13px;
+        font-size: 0.72rem;
+        border-radius: 10px;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: auto;
+        display: block;
+        padding: 55px 22px 70px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .app-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 21px;
+        font-size: 2.4rem;
+        margin: 0 auto 24px;
+    }
+
+    .eyebrow {
+        font-size: 0.62rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.55rem, 12vw, 3.4rem);
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+        margin: 13px 0 20px;
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0 auto;
+        max-width: 360px;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        margin-top: 28px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        min-height: 52px;
+        border-radius: 13px;
+    }
+
+    .download-note {
+        font-size: 0.7rem;
+        margin-top: 13px;
+    }
+
+    /* Hide desktop phone mockup */
+    .hero-preview {
+        display: none;
+    }
+
+
+    /* SECTIONS */
+    .section,
+    .privacy-section,
+    .install-section,
+    .about-section {
+        padding: 75px 22px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 2.25rem;
+        line-height: 1.08;
+    }
+
+    .section-heading p {
+        font-size: 0.9rem;
+    }
+
+
+    /* FEATURES */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .feature-card {
+        min-height: auto;
+        padding: 22px;
+        border-radius: 19px;
+    }
+
+    .feature-number {
+        font-size: 0.65rem;
+    }
+
+    .feature-icon {
+        width: 45px;
+        height: 45px;
+        margin: 17px 0 14px;
+        border-radius: 13px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .feature-card p {
+        font-size: 0.84rem;
+        line-height: 1.55;
+    }
+
+    .tag {
+        margin-top: 15px;
+    }
+
+
+    /* PRIVACY */
+    .privacy-card {
+        min-height: auto;
+        display: block;
+        padding: 30px 23px;
+        border-radius: 22px;
+    }
+
+    .privacy-copy h2 {
+        font-size: 2.2rem;
+    }
+
+    .privacy-copy p {
+        font-size: 0.88rem;
+    }
+
+    .privacy-points {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+
+    .privacy-visual {
+        display: none;
+    }
+
+
+    /* INSTALLATION */
+    .warning-banner {
+        padding: 18px;
+        gap: 12px;
+        border-radius: 15px;
+    }
+
+    .warning-banner p {
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .step {
+        padding: 21px;
+        border-radius: 18px;
+    }
+
+    .step-icon {
+        margin: 14px 0 12px;
+    }
+
+    .step h3 {
+        font-size: 1rem;
+    }
+
+    .step p {
+        font-size: 0.8rem;
+    }
+
+
+    /* ABOUT */
+    .about-card h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-card > p {
+        font-size: 0.9rem;
+    }
+
+    .about-list {
+        margin-top: 30px;
+        gap: 10px;
+    }
+
+    .about-row {
+        grid-template-columns: 43px 1fr;
+        gap: 12px;
+        padding: 17px;
+        border-radius: 16px;
+    }
+
+    .row-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-row h3 {
+        font-size: 0.95rem;
+    }
+
+    .about-row p {
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+
+
+    /* FINAL CTA */
+    .cta-section {
+        padding: 0 22px 70px;
+    }
+
+    .cta-card {
+        padding: 30px 22px;
+        border-radius: 21px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .cta-card h2 {
+        font-size: 1.9rem;
+    }
+
+    .cta-card .primary-btn {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 25px 22px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
 }
